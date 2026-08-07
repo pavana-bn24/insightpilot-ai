@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-slate-100 text-slate-800 antialiased dark:bg-slate-950 dark:text-slate-200;
+    font-feature-settings: "cv11", "ss01";
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-300 dark:bg-slate-700;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply rounded-2xl border border-slate-200/80 bg-white/80 shadow-sm backdrop-blur-xl dark:border-slate-800 dark:bg-slate-900/70;
+  }
+  .card-pad {
+    @apply p-5;
+  }
+  .card-title {
+    @apply text-[13px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400;
+  }
+  .page-title {
+    @apply text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white;
+  }
+  .page-sub {
+    @apply mt-1 text-sm text-slate-500 dark:text-slate-400;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition-all duration-150 hover:-translate-y-px focus:outline-none focus:ring-2 focus:ring-brand-400/50 disabled:pointer-events-none disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply bg-brand-600 text-white shadow-glow hover:bg-brand-500;
+  }
+  .btn-ghost {
+    @apply border border-slate-300 bg-transparent text-slate-600 hover:border-brand-400 hover:text-brand-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-brand-500 dark:hover:text-brand-400;
+  }
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-100 px-2.5 py-0.5 text-[11px] font-semibold text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300;
+  }
+  .chip-accent {
+    @apply border-brand-200 bg-brand-50 text-brand-700 dark:border-brand-500/30 dark:bg-brand-500/10 dark:text-brand-300;
+  }
+  .chip-success {
+    @apply border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-300;
+  }
+  .chip-warning {
+    @apply border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-300;
+  }
+  .chip-danger {
+    @apply border-rose-200 bg-rose-50 text-rose-700 dark:border-rose-500/30 dark:bg-rose-500/10 dark:text-rose-300;
+  }
+  .input,
+  .select,
+  .textarea {
+    @apply w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-800 placeholder-slate-400 transition-colors focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-400/40 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200;
+  }
+  .table-wrap {
+    @apply overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800;
+  }
+  .data-table {
+    @apply w-full border-collapse text-left text-sm;
+  }
+  .data-table th {
+    @apply sticky top-0 bg-slate-100 px-3 py-2.5 text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:bg-slate-800 dark:text-slate-400;
+  }
+  .data-table td {
+    @apply border-t border-slate-200 px-3 py-2 text-slate-700 dark:border-slate-800 dark:text-slate-300;
+  }
+  .data-table tr:hover td {
+    @apply bg-brand-50/40 dark:bg-brand-500/5;
+  }
+  .mono {
+    @apply font-mono;
+  }
+  .stat-value {
+    @apply text-xl font-extrabold tracking-tight text-slate-900 dark:text-white;
+  }
+  .skeleton {
+    @apply animate-pulse rounded-lg bg-slate-200 dark:bg-slate-800;
+  }
+}
+
+/* Subtle gradient backdrop */
+.bg-scene {
+  @apply pointer-events-none fixed inset-0 -z-10;
+  background-image: radial-gradient(ellipse at top left, rgba(99, 102, 241, 0.14), transparent 55%),
+    radial-gradient(ellipse at bottom right, rgba(14, 165, 233, 0.12), transparent 55%);
+}
+html.dark .bg-scene {
+  background-image: radial-gradient(ellipse at top left, rgba(99, 102, 241, 0.16), transparent 55%),
+    radial-gradient(ellipse at bottom right, rgba(14, 165, 233, 0.12), transparent 55%);
+}
