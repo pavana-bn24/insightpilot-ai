@@ -1,4 +1,4 @@
-# 🧠 InsightPilot AI
+#  InsightPilot AI
 
 **An Autonomous AI Business Intelligence Agent** that answers natural-language questions over
 CSV / Excel datasets using a complete **Think → Plan → Clarify → Act → Verify → Explain** workflow with
@@ -10,7 +10,7 @@ every answer.
 
 ---
 
-## ✨ Highlights
+##  Highlights
 
 | Capability | How it works |
 |---|---|
@@ -30,7 +30,7 @@ every answer.
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
@@ -88,7 +88,7 @@ whole agent fully functional offline.
 
 ---
 
-## 🧰 Technology Stack
+##  Technology Stack
 
 | Layer | Tech |
 |---|---|
@@ -103,7 +103,7 @@ whole agent fully functional offline.
 
 ---
 
-## 🚀 Installation
+##  Installation
 
 ### Prerequisites
 - Python 3.11+ and Node.js 18+
@@ -126,7 +126,7 @@ npm install
 
 ---
 
-## 🔑 Environment Variables
+##  Environment Variables
 
 Create `backend/.env` from the template:
 
@@ -148,7 +148,7 @@ cp backend/.env.example backend/.env
 
 ---
 
-## ▶️ Running the Backend
+##  Running the Backend
 
 ```bash
 cd backend
@@ -158,7 +158,7 @@ python -m uvicorn backend.main:app --reload --port 8000
 API is served at `http://localhost:8000` (docs at `/docs`). Bundled sample datasets are
 auto-generated on first use (`backend/data/samples/*.csv`).
 
-## ▶️ Running the Frontend (development)
+##  Running the Frontend (development)
 
 ```bash
 cd frontend
@@ -178,7 +178,7 @@ The backend serves the built React app at `http://localhost:8000`.
 
 ---
 
-## 🤖 How the Agent Works
+##  How the Agent Works
 
 For every question the pipeline runs:
 
@@ -205,7 +205,7 @@ chain. The UI exposes the generated Python/Pandas snippet per step.
 
 ---
 
-## ❓ Sample Questions
+##  Sample Questions
 
 | Question | Intent detected |
 |---|---|
@@ -252,7 +252,7 @@ chain. The UI exposes the generated Python/Pandas snippet per step.
 
 ---
 
-## ⚖️ Tradeoffs
+##  Tradeoffs
 
 - **In-memory state** keeps the demo simple and dependency-free; restarting the backend resets
   history. (Swap for SQLite/Redis in production.)
@@ -265,7 +265,7 @@ chain. The UI exposes the generated Python/Pandas snippet per step.
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 - Vector-retrieval over column metadata for smarter column disambiguation.
 - Streaming / step-by-step live updates during long analyses.
@@ -277,7 +277,7 @@ chain. The UI exposes the generated Python/Pandas snippet per step.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 backend/
@@ -305,7 +305,7 @@ README.md
 
 ---
 
-## 🧪 Running the tests
+##  Running the tests
 
 ```bash
 # On Windows set the console encoding first so ₹ prints correctly:
